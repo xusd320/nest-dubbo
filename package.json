@@ -1,5 +1,5 @@
 {
-  "name": "nest-dubbo",
+  "name": "nestjs-dubbo",
   "version": "1.0.0",
   "license": "MIT",
   "description": "A Nest module wrapper for dubbo",
