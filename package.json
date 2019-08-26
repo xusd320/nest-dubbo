@@ -1,0 +1,54 @@
+{
+  "name": "nest-dubbo",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "A Nest module wrapper for dubbo",
+  "keywords": [
+    "nestjs",
+    "dubbo",
+    "rpc"
+  ],
+  "author": "Shull Xu <xusd320@gmail.com>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "test": "mocha --opts .mocharc",
+    "prebuild": "rimraf dist",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^6.5.3",
+    "@nestjs/core": "^6.5.3",
+    "@nestjs/platform-express": "^6.5.3",
+    "@nestjs/testing": "^6.5.3",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.2",
+    "chai": "^4.2.0",
+    "dubbo2.js": "git+ssh://git@github.com:xusd320/dubbo2.js.git",
+    "mocha": "^6.2.0",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.0",
+    "rxjs": "^6.5.2",
+    "source-map-support": "^0.5.13",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^6.5.3",
+    "dubbo2.js": "git+ssh://git@github.com:xusd320/dubbo2-js.git"
+  },
+  "homepage": "https://github.com/xusd320/nest-dubbo#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xusd320/nest-dubbo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xusd320/nest-dubbo/issues"
+  }
+}
