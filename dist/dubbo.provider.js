@@ -6,7 +6,11 @@ function createDubboProviders(dubboOpts) {
     return [
         {
             provide: dubbo_constant_1.DUBBO_MODULE_PROVIDER,
-            useFactory: () => dubbo2_js_1.Dubbo.from(dubboOpts),
+            useFactory: async () => {
+                const dubbo = dubbo2_js_1.Dubbo.from(dubboOpts);
+                await dubbo.ready();
+                return dubbo;
+            },
         },
     ];
 }
@@ -20,7 +24,11 @@ function createDubboAsyncProviders(options) {
         },
         {
             provide: dubbo_constant_1.DUBBO_MODULE_PROVIDER,
-            useFactory: (dubboOpts) => dubbo2_js_1.Dubbo.from(dubboOpts),
+            useFactory: async (dubboOpts) => {
+                const dubbo = dubbo2_js_1.Dubbo.from(dubboOpts);
+                await dubbo.ready();
+                return dubbo;
+            },
             inject: [dubbo_constant_1.DUBBO_MODULE_OPTIONS],
         },
     ];

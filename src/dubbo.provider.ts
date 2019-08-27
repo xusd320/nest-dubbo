@@ -7,7 +7,11 @@ export function createDubboProviders(dubboOpts: DubboModuleOptions): Provider[] 
   return [
     {
       provide: DUBBO_MODULE_PROVIDER,
-      useFactory: () => Dubbo.from(dubboOpts),
+      useFactory: async () => {
+        const dubbo = Dubbo.from(dubboOpts);
+        await dubbo.ready();
+        return dubbo;
+      },
     },
   ];
 }
@@ -21,7 +25,11 @@ export function createDubboAsyncProviders(options: DubboModuleAsyncOptions): Pro
     },
     {
       provide: DUBBO_MODULE_PROVIDER,
-      useFactory: (dubboOpts: DubboModuleOptions) => Dubbo.from(dubboOpts),
+      useFactory: async (dubboOpts: DubboModuleOptions) => {
+        const dubbo = Dubbo.from(dubboOpts);
+        await dubbo.ready();
+        return dubbo;
+      },
       inject: [DUBBO_MODULE_OPTIONS],
     },
   ];

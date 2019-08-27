@@ -1,5 +1,5 @@
 import { ModuleMetadata } from '@nestjs/common/interfaces';
-import { IDubboProps } from 'dubbo2.js/es7/types';
+import { IDubboProps } from 'dubbo2.js/es7/typings/types';
 
 export type DubboModuleOptions = IDubboProps;
 
