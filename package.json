@@ -1,6 +1,6 @@
 {
   "name": "nest-dubbo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "A Nest module wrapper for dubbo",
   "keywords": [
@@ -29,7 +29,7 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.2",
     "chai": "^4.2.0",
-    "dubbo2.ts": "^1.0.0",
+    "dubbo2.js": "git+https://github.com/xusd320/dubbo2.js.git",
     "eslint": "^6.2.2",
     "eslint-config-standard": "^14.0.1",
     "eslint-plugin-import": "^2.18.2",
