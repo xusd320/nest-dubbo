@@ -1,5 +1,5 @@
 import { Provider } from '@nestjs/common';
-import { Dubbo } from 'dubbo2.js';
+import { Dubbo } from 'dubbo2.ts';
 import { DubboModuleOptions, DubboModuleAsyncOptions } from './dubbo.interface';
 import { DUBBO_MODULE_PROVIDER, DUBBO_MODULE_OPTIONS } from './dubbo.constant';
 
